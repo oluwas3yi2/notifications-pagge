@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5rem;
+  color: hsl(219, 12%, 42%);
+  height: 100vh;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+article.card {
+  display: grid;
+  grid-template-areas: "header" "container";
+  background: hsl(210, 60%, 98%);
+  padding: 1.5rem;
+}
+article.card div.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+  padding: 1rem 0;
+}
+article.card div.header div.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+article.card div.header div.left h2 {
+  color: hsl(224, 21%, 14%);
+}
+article.card div.header div.left span.blue {
+  padding: 0.2rem 0.8rem;
+  background: hsl(219, 85%, 26%);
+  border-radius: 5px;
+  margin-left: 1rem;
+  color: hsl(0, 100%, 100%);
+}
+article.card div.container {
+  grid-area: container;
+}
+article.card div.container div.unread {
+  background: hsl(211, 68%, 94%);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+article.card div.container div.unread div.txt {
+  margin-left: 1rem;
+}
+article.card div.container div.unread div.txt span.bold {
+  font-weight: bolder;
+  color: hsl(224, 21%, 14%);
+}
+article.card div.container div.unread div.txt span.Lt-bold {
+  font-weight: bold;
+}
+article.card div.container div.unread div.txt span.dot {
+  font-size: 1.5rem;
+  color: hsl(1, 90%, 64%);
+}
+article.card div.container div.unread div.txt span.blue {
+  font-weight: bold;
+  color: hsl(219, 85%, 26%);
+}
+
+@media (min-width: 500px) {
+  main {
+    background: hsl(205, 33%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  main article.card {
+    box-shadow: 2px 2px 10px hsl(219, 14%, 63%);
+    border-radius: 1rem;
+    margin: 3rem 0;
+  }
+}
+div.container div.read {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
