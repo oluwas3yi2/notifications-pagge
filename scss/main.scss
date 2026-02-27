@@ -115,12 +115,10 @@ article.card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 
     article.card {
       box-shadow: 2px 2px 10px $gray-500;
       border-radius: 1rem;
-      // width: 50%;
       margin: 3rem 0;
     }
   }
