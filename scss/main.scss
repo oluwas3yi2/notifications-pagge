@@ -33,6 +33,9 @@ body {
   & a {
     text-decoration: none;
     color: inherit;
+    &:hover {
+      color: $blue-950;
+    }
   }
 }
 
@@ -81,18 +84,32 @@ article.card {
       margin: 1rem 0;
       border-radius: 1rem;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+
+      & .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+      }
 
       & div.txt {
         margin-left: 1rem;
 
         & span.bold {
-          font-weight: bolder;
+          font-weight: bold;
           color: $navy-950;
+          &:hover {
+            color: $blue-950;
+            cursor: pointer;
+          }
         }
 
         & span.Lt-bold {
           font-weight: bold;
+          &:hover {
+            color: $blue-950;
+            cursor: pointer;
+          }
         }
 
         & span.dot {
@@ -103,7 +120,77 @@ article.card {
         & span.blue {
           font-weight: bold;
           color: $blue-950;
+          cursor: pointer;
         }
+        & .grey {
+          color: $gray-500;
+        }
+      }
+    }
+    & div.read {
+      display: flex;
+      align-items: flex-start;
+      margin: 1rem 0;
+      padding: 1rem;
+      & .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+      }
+      & .txt {
+        margin-left: 1rem;
+        & .bold {
+          font-weight: 800;
+          color: $navy-950;
+        }
+        & .Lt-bold {
+          font-weight: bold;
+          color: $gray-600;
+        }
+
+        & .grey {
+          color: $gray-500;
+        }
+        & div.message {
+          border: 1px solid $gray-500;
+          padding: 1rem;
+          margin-top: 1rem;
+          border-radius: 0.5rem;
+          &:hover {
+            background-color: $blue-100;
+            cursor: pointer;
+            border: none;
+          }
+        }
+      }
+      & div.cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+
+        & div.txt {
+          margin-left: 1rem;
+
+          & span.bold {
+            font-weight: 800;
+            color: $navy-950;
+          }
+        }
+        & .grey {
+          color: $gray-500;
+        }
+        .lt-bold {
+          font-weight: 800;
+          color: $gray-600;
+        }
+      }
+
+      & .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 0.5rem;
+        cursor: pointer;
       }
     }
   }
@@ -122,9 +209,4 @@ article.card {
       margin: 3rem 0;
     }
   }
-}
-
-// remove this and continue
-div.container div.read {
-  display: none;
 }

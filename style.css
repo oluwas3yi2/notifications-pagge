@@ -17,10 +17,9 @@ body {
 body a {
   text-decoration: none;
   color: inherit;
-  &:hover {
-    color: hsl(219, 85%, 26%);
-    cursor: pointer;
-  }
+}
+body a:hover {
+  color: hsl(219, 85%, 26%);
 }
 
 article.card {
@@ -64,23 +63,28 @@ article.card div.container div.unread {
   display: flex;
   align-items: flex-start;
 }
+article.card div.container div.unread .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
 article.card div.container div.unread div.txt {
   margin-left: 1rem;
 }
 article.card div.container div.unread div.txt span.bold {
-  font-weight: bolder;
+  font-weight: bold;
   color: hsl(224, 21%, 14%);
-  &:hover {
-    color: hsl(219, 85%, 26%);
-    cursor: pointer;
-  }
+}
+article.card div.container div.unread div.txt span.bold:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
 }
 article.card div.container div.unread div.txt span.Lt-bold {
   font-weight: bold;
-  &:hover {
-    color: hsl(219, 85%, 26%);
-    cursor: pointer;
-  }
+}
+article.card div.container div.unread div.txt span.Lt-bold:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
 }
 article.card div.container div.unread div.txt span.dot {
   font-size: 1.5rem;
@@ -91,11 +95,19 @@ article.card div.container div.unread div.txt span.blue {
   color: hsl(219, 85%, 26%);
   cursor: pointer;
 }
+article.card div.container div.unread div.txt .grey {
+  color: hsl(219, 14%, 63%);
+}
 article.card div.container div.read {
   display: flex;
   align-items: flex-start;
   margin: 1rem 0;
   padding: 1rem;
+}
+article.card div.container div.read .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
 article.card div.container div.read .txt {
   margin-left: 1rem;
@@ -103,49 +115,49 @@ article.card div.container div.read .txt {
 article.card div.container div.read .txt .bold {
   font-weight: 800;
   color: hsl(224, 21%, 14%);
-  &:hover {
-    color: hsl(219, 85%, 26%);
-    cursor: pointer;
-  }
 }
 article.card div.container div.read .txt .Lt-bold {
-  font-weight: 800;
+  font-weight: bold;
   color: hsl(219, 12%, 42%);
-  &:hover {
-    color: hsl(219, 85%, 26%);
-    cursor: pointer;
-  }
 }
-article.card div.container div.read div.txt span.grey {
+article.card div.container div.read .txt .grey {
   color: hsl(219, 14%, 63%);
 }
-article.card div.container div.unread div.txt span.grey {
-  color: hsl(219, 14%, 63%);
+article.card div.container div.read .txt div.message {
+  border: 1px solid hsl(219, 14%, 63%);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
 }
-article.card div.container div.read .cont {
+article.card div.container div.read .txt div.message:hover {
+  background-color: hsl(211, 68%, 94%);
+  cursor: pointer;
+  border: none;
+}
+article.card div.container div.read div.cont {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
 }
-article.card div.container div.read .txt .message {
-  border: 1px solid hsl(219, 14%, 63%);
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 0.5rem;
-  &:hover {
-    background-color: hsl(211, 68%, 94%);
-    cursor: pointer;
-    border: none;
-  }
+article.card div.container div.read div.cont div.txt {
+  margin-left: 1rem;
 }
-img.avatar {
+article.card div.container div.read div.cont div.txt span.bold {
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+article.card div.container div.read div.cont .grey {
+  color: hsl(219, 14%, 63%);
+}
+article.card div.container div.read div.cont .lt-bold {
+  font-weight: 800;
+  color: hsl(219, 12%, 42%);
+}
+article.card div.container div.read .avatar {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
-}
-.image .avatar {
-  border-radius: 0;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
@@ -162,3 +174,5 @@ img.avatar {
     margin: 3rem 0;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
