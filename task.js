@@ -1,31 +1,38 @@
 const number = document.querySelector(".header .blue");
 const unread = document.querySelectorAll(".unread");
-const mark = document.getElementsByTagName("a");
+const btn = document.querySelector(".btn");
 let allUnread = true;
+//logic for mark as read
+function markAsRead() {
+  if (!allUnread) return;
+  for (let i = 0; i < unread.length; i++) {
+    unread[i].classList.remove("active");
+    let dot = unread[i].querySelector(".dot");
+    if (dot) dot.style.display = "none";
+  }
+  number.textContent = "0";
+  allUnread = false;
+}
+//logic for mark as unread
+function markUnRead() {
+  if (allUnread) return;
+  for (let i = 0; i < unread.length; i++) {
+    unread[i].classList.add("active");
+    let dot = unread[i].querySelector(".dot");
+    if (dot) dot.style.display = "inline-block";
+  }
+  number.textContent = unread.length;
+  allUnread = true;
+}
+// toggle between markall and markunread
 function toggle() {
   if (allUnread) {
-    for (let i = 0; i < unread.length; i++) {
-      unread[i].classList.remove("unread");
-      const dot = document.querySelector(".dot");
-      if (dot) {
-        dot.style.display = "none";
-      }
-      number.textContent = "0";
-    }
+    markAsRead();
   } else {
-    for (let i = 0; i < unread.length; i++) {
-      unread[i].classList.add("unread");
-      const dot = document.querySelector(".dot");
-      if (dot) {
-        dot.style.display = "block";
-      }
-      number.textContent = unread.length;
-    }
-    allUnread = !allUnread;
+    markUnRead();
   }
+  console.log(allUnread);
 }
-
-mark.addEventListener("click", (e) => {
-  e.preventDefault();
+btn.addEventListener("click", () => {
   toggle();
 });
