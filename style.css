@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   font-size: 1rem;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -55,8 +59,10 @@ article.card div.header div.left span.blue {
 article.card div.container {
   grid-area: container;
 }
-article.card div.container div.unread {
+article.card div.container div.unread.active {
   background: hsl(211, 68%, 94%);
+}
+article.card div.container div.unread {
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 1rem;
@@ -103,6 +109,7 @@ article.card div.container div.read {
   align-items: flex-start;
   margin: 1rem 0;
   padding: 1rem;
+  position: relative;
 }
 article.card div.container div.read .avatar {
   width: 48px;
@@ -134,31 +141,31 @@ article.card div.container div.read .txt div.message:hover {
   cursor: pointer;
   border: none;
 }
-article.card div.container div.read div.cont {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-}
-article.card div.container div.read div.cont div.txt {
+article.card div.container div.read div.txt {
   margin-left: 1rem;
 }
-article.card div.container div.read div.cont div.txt span.bold {
+article.card div.container div.read div.txt p {
+  padding-right: 2rem;
+}
+article.card div.container div.read div.txt span.bold {
   font-weight: 800;
   color: hsl(224, 21%, 14%);
 }
-article.card div.container div.read div.cont .grey {
+article.card div.container div.read .grey {
   color: hsl(219, 14%, 63%);
 }
-article.card div.container div.read div.cont .lt-bold {
+article.card div.container div.read .lt-bold {
   font-weight: 800;
   color: hsl(219, 12%, 42%);
 }
-article.card div.container div.read .avatar {
+article.card div.container div.read .avatar2 {
   width: 48px;
   height: 48px;
   border-radius: 0.5rem;
   cursor: pointer;
+  right: 0;
+  margin-left: 1rem;
+  position: absolute;
 }
 
 @media (min-width: 300px) and (max-width: 349px) {
@@ -194,7 +201,7 @@ article.card div.container div.read .avatar {
     width: 70%;
   }
 }
-@media (max-height: 899px) {
+@media (max-height: 899px) and (min-width: 1000px) {
   body {
     display: block;
     height: 100%;
