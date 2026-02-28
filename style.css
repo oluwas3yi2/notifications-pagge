@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5rem;
+  color: hsl(219, 12%, 42%);
+  height: 100vh;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body a:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+article.card {
+  display: grid;
+  grid-template-areas: "header" "container";
+  background: hsl(210, 60%, 98%);
+  padding: 1.5rem;
+}
+article.card div.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+  padding: 1rem 0;
+}
+article.card div.header div.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+article.card div.header div.left h2 {
+  color: hsl(224, 21%, 14%);
+}
+article.card div.header div.left span.blue {
+  padding: 0.2rem 0.8rem;
+  background: hsl(219, 85%, 26%);
+  border-radius: 5px;
+  margin-left: 1rem;
+  color: hsl(0, 100%, 100%);
+}
+article.card div.container {
+  grid-area: container;
+}
+article.card div.container div.unread {
+  background: hsl(211, 68%, 94%);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+article.card div.container div.unread .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+article.card div.container div.unread div.txt {
+  margin-left: 1rem;
+}
+article.card div.container div.unread div.txt span.bold {
+  font-weight: bold;
+  color: hsl(224, 21%, 14%);
+}
+article.card div.container div.unread div.txt span.bold:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+article.card div.container div.unread div.txt span.Lt-bold {
+  font-weight: bold;
+}
+article.card div.container div.unread div.txt span.Lt-bold:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+article.card div.container div.unread div.txt span.dot {
+  font-size: 1.5rem;
+  color: hsl(1, 90%, 64%);
+}
+article.card div.container div.unread div.txt span.blue {
+  font-weight: bold;
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+article.card div.container div.unread div.txt .grey {
+  color: hsl(219, 14%, 63%);
+}
+article.card div.container div.read {
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+article.card div.container div.read .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+article.card div.container div.read .txt {
+  margin-left: 1rem;
+}
+article.card div.container div.read .txt .bold {
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+article.card div.container div.read .txt .Lt-bold {
+  font-weight: bold;
+  color: hsl(219, 12%, 42%);
+}
+article.card div.container div.read .txt .grey {
+  color: hsl(219, 14%, 63%);
+}
+article.card div.container div.read .txt div.message {
+  border: 1px solid hsl(219, 14%, 63%);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+article.card div.container div.read .txt div.message:hover {
+  background-color: hsl(211, 68%, 94%);
+  cursor: pointer;
+  border: none;
+}
+article.card div.container div.read div.cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+article.card div.container div.read div.cont div.txt {
+  margin-left: 1rem;
+}
+article.card div.container div.read div.cont div.txt span.bold {
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+article.card div.container div.read div.cont .grey {
+  color: hsl(219, 14%, 63%);
+}
+article.card div.container div.read div.cont .lt-bold {
+  font-weight: 800;
+  color: hsl(219, 12%, 42%);
+}
+article.card div.container div.read .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 300px) and (max-width: 349px) {
+  body {
+    font-size: 0.88rem;
+  }
+}
+@media (min-width: 350px) and (max-width: 374px) {
+  body {
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 550px) {
+  body {
+    background: hsl(205, 33%, 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body main {
+    margin: 3rem auto;
+  }
+  body article.card {
+    box-shadow: 2px 2px 10px hsl(219, 14%, 63%);
+    border-radius: 1rem;
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+@media (min-width: 550px) and (min-width: 700px) {
+  body article.card {
+    width: 70%;
+  }
+}
+@media (max-height: 899px) {
+  body {
+    display: block;
+    height: 100%;
+  }
+  body main {
+    margin: 3rem auto;
+  }
+  body article.card {
+    width: 60%;
+  }
+}
+@media (min-width: 1279px) {
+  body article.card {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
