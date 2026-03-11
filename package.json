@@ -1,0 +1,9 @@
+{
+  "author": "Timothy Adeyinka",
+  "dependencies": {
+    "sass": "^1.97.3"
+  },
+  "scripts": {
+    "compile:sass": "sass scss/main.scss style.css -w"
+  }
+}

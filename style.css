@@ -215,7 +215,11 @@ article.card div.container div.read .avatar2 {
 }
 @media (min-width: 1279px) {
   body article.card {
+<<<<<<< HEAD
     width: 80%;
+=======
+    width: 45%;
+>>>>>>> c8cca68d49a6a86b21feb7f50e4c20ffdfc67ac5
   }
 }
 
